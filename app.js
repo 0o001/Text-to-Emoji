@@ -8,14 +8,14 @@ const rl = readline.createInterface({
 
 })
 
-rl.question('> ', (answer) => {
+rl.question('> ', ( answer ) => {
 
     let textToEmoji = ''
     const answerArray = answer.split(' ').filter( item => item )
     
     answerArray.forEach( ( answerItem ) => {
 
-        const findEmojiArray = Object.values(emoji).filter( ( emojiItem ) => {
+        const findEmojiArray = Object.values( emoji ).filter( ( emojiItem ) => {
 
             return answerItem.includes( ...emojiItem.keywords )
 
