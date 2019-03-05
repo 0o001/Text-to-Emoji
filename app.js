@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 
 rl.question('> ', ( answer ) => {
 
-    let textToEmoji = ''
+    let textToEmoji = []
     const answerArray = answer.split(' ').filter( item => item )
     
     answerArray.forEach( ( answerItem ) => {
@@ -25,13 +25,13 @@ rl.question('> ', ( answer ) => {
 
             const char = findEmojiArray[Math.floor( Math.random() * findEmojiArray.length )].char
 
-            textToEmoji += char + ' '
+            textToEmoji.push( char )
 
         }
 
     })
 
-    console.log( textToEmoji )
+    console.log( textToEmoji.join(' ') )
      
     rl.close()
     
